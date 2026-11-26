@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Socket.IO Messages</title>
+</head>
+<body>
+  <h1>Socket.IO Messages</h1>
+  <ul id="messages" aria-live="polite"></ul>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    function appendMessage(message) {
+      $('<li>').text(message).appendTo('#messages');
+    }
+
+    window.onload = function () {
+      const socket = io('http://localhost:9000');
+
+      socket.on('confirm connection', function (message) {
+        appendMessage(message);
+      });
+
+      socket.on('response', function (message) {
+        appendMessage(message);
+      });
+
+      socket.emit('request', 'Hello from the client');
+    };
+  </script>
+</body>
+</html>

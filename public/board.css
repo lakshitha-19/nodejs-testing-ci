@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background: #f4f6fa;
+  color: #17233c;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+form p {
+  margin-bottom: 0.5rem;
+}
+
+input,
+button {
+  padding: 0.65rem;
+  font: inherit;
+}
+
+input {
+  box-sizing: border-box;
+  width: min(75%, 28rem);
+}
+
+#board {
+  width: 300px;
+  min-height: 500px;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  background: white;
+  overflow-wrap: anywhere;
+}
+
+.message {
+  width: 180px;
+  margin: 5px;
+  background-color: #F5FFAD;
+}
+
+.sent {
+  margin-left: 115px;
+  background-color: #BEFF99;
+}

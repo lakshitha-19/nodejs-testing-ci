@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Message Board</title>
+  <link rel="stylesheet" href="/board.css">
+</head>
+<body>
+  <main>
+    <h1>Message Board</h1>
+    <form id="message-form">
+      <p><label for="msg">Message</label></p>
+      <input id="msg" type="text" required>
+      <button id="send" type="submit" disabled>Send</button>
+    </form>
+    <div id="board" role="log" aria-label="Messages"></div>
+  </main>
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/board.js"></script>
+</body>
+</html>

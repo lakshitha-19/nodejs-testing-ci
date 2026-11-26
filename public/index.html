@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Socket.IO Workshop</title>
+</head>
+<body>
+  <main>
+    <h1>Socket.IO Workshop</h1>
+    <p id="status" role="status">Connecting…</p>
+    <form id="request-form">
+      <label for="message">Message</label>
+      <input id="message" value="Hello from the client" required>
+      <button type="submit" disabled>Send request</button>
+    </form>
+    <p id="reply" role="status"></p>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
